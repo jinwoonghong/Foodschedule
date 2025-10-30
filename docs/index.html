@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#0066CC">
+    <meta name="description" content="서강대학교 베르크만스우정원 구내식당의 주간 메뉴를 확인하세요">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="서강대 식단">
+    <link rel="manifest" href="manifest.json">
+    <title>서강대 우정원 식단표</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app">
+        <!-- 헤더 -->
+        <header class="header">
+            <h1>🍽️ 서강대 우정원</h1>
+            <p class="subtitle">베르크만스우정원(BW관) 식단표</p>
+        </header>
+
+        <!-- 날짜 네비게이션 -->
+        <div class="date-nav">
+            <button class="nav-btn" id="prevWeek">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="15 18 9 12 15 6"></polyline>
+                </svg>
+            </button>
+            <div class="current-week" id="currentWeek">
+                <span id="weekDisplay">이번 주</span>
+            </div>
+            <button class="nav-btn" id="nextWeek">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+            </button>
+        </div>
+
+        <!-- 요일 탭 -->
+        <div class="day-tabs" id="dayTabs">
+            <!-- JavaScript로 동적 생성 -->
+        </div>
+
+        <!-- 메뉴 컨테이너 -->
+        <div class="menu-container" id="menuContainer">
+            <div class="loading" id="loading">
+                <div class="spinner"></div>
+                <p>메뉴를 불러오는 중...</p>
+            </div>
+        </div>
+
+        <!-- 식당 정보 -->
+        <div class="info-section">
+            <h3>📍 이용 안내</h3>
+            <div class="info-item">
+                <span class="info-label">위치</span>
+                <span class="info-value">베르크만스우정원(BW관) 1층</span>
+            </div>
+            <div class="info-item">
+                <span class="info-label">중식 운영시간</span>
+                <span class="info-value">평일 11:00 ~ 15:00</span>
+            </div>
+            <div class="info-item">
+                <span class="info-label">가격</span>
+                <span class="info-value">3,500원 ~ 6,000원</span>
+            </div>
+            <div class="info-item">
+                <span class="info-label">문의</span>
+                <span class="info-value">
+                    <a href="tel:02-706-7691">02-706-7691</a>
+                </span>
+            </div>
+        </div>
+
+        <!-- 푸터 -->
+        <footer class="footer">
+            <p>종합봉사실 02-705-8000</p>
+            <p class="small-text">실제 메뉴는 현장 사정에 따라 변경될 수 있습니다.</p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
